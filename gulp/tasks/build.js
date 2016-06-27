@@ -1,10 +1,11 @@
 'use strict';
 
 let gulp = require('gulp'),
-    jspm = require('jspm');
+    Builder = require('jspm').Builder,
+    builder = new Builder();
 
 gulp.task('build:bundle', function() {
-    return jspm.bundleSFX('src/main', 'build/js/main.js');
+    return builder.bundle('chrome6', 'build/js/main.js');
 });
 
 gulp.task('build:copy', function() {
