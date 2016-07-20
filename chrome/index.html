@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>App</title>
-
-    <link rel="stylesheet" href="app.css">
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 </head>
 
-<body>
-    <div class="titlebar">
-        <div class="buttons">
-            <button id="title-close">x</button>
-            <button class="window" id="title-minimize">-</button>
-            <button class="window" id="title-maximize">+</button>
-            <button id="title-fullscreen">&#11799;</button>
+<body ng-cloak layout="column">
+    <md-toolbar class="md-hue-1 system-bar">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <md-button ng-click="minimizeApp();" class="md-icon-button" aria-label="Minimize">
+                <md-icon md-svg-icon="window-minimize"></md-icon>
+            </md-button>
+            <md-button ng-click="maximizeApp();" class="md-icon-button" aria-label="Maximize">
+                <md-icon md-svg-icon="window-maximize"></md-icon>
+            </md-button>
+            <md-button ng-click="closeApp();" class="md-icon-button" aria-label="Close">
+                <md-icon md-svg-icon="window-close"></md-icon>
+            </md-button>
         </div>
-        <h1>
-            Chrome App Experiment
-        </h1>
-    </div>
+    </md-toolbar>
+
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h2>
+          <span>Boilerplate Chrome Material App</span>
+        </h2>
+        <span flex></span>
+        <md-button ng-click="console.log('I love you!');" class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="heart" style="color: greenyellow;"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="dots-vertical"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
 
     <div id="main"></div>
 

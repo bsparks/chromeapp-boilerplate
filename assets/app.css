@@ -5,6 +5,22 @@
   padding: 0;
 }
 
+[ng-cloak] {
+    display: none;
+}
+
+.system-bar {
+  -webkit-app-region: drag;
+  app-region: drag;
+  min-height: 32px;
+  max-height: 32px;
+}
+
+.system-bar md-button {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}
+
 html {
   overflow: hidden;
 }
