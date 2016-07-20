@@ -12,16 +12,20 @@ angular
         let app = angular
             .module(appName, ['ngMaterial']);
 
-        app.config(function ($mdIconProvider) {
+        app.config(function ($mdIconProvider, $mdThemingProvider) {
             $mdIconProvider
-                .defaultIconSet('assets/mdi.svg')
+                .defaultIconSet('assets/mdi.svg');
+
+            $mdThemingProvider.theme('default')
+                .primaryPalette('light-blue')
+                .accentPalette('grey');
         });
 
         app.run($rootScope => {
             let appWin = chrome.app.window.current();
-            $rootScope.closeApp = function() { appWin.close(); };
-            $rootScope.minimizeApp = function() { appWin.minimize(); };
-            $rootScope.maximizeApp = function() { appWin.maximize(); };
+            $rootScope.closeApp = function () { appWin.close(); };
+            $rootScope.minimizeApp = function () { appWin.minimize(); };
+            $rootScope.maximizeApp = function () { appWin.maximize(); };
         });
 
         angular.bootstrap(body, [app.name], { strictDi: false });
