@@ -1,14 +1,14 @@
 {
-  "name": "chrome6",
-  "version": "1.0.0",
+  "name": "lst-chromeapp",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ben Sparks <ben.sparks@pearson.com>",
+  "license": "UNLICENSED",
+  "private": true,
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-less": "^3.1.0",
