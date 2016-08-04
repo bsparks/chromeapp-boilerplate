@@ -16,7 +16,7 @@
   max-height: 32px;
 }
 
-.system-bar md-button {
+.system-bar .md-button {
   -webkit-app-region: no-drag;
   app-region: no-drag;
 }
